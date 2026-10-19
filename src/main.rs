@@ -1,5 +1,5 @@
-#[cfg(not(all(target_os = "linux", target_arch = "x86_64")))]
-compile_error!("XLM only supports Linux x86_64");
+#[cfg(not(all(target_os = "linux", any(target_arch = "x86_64", target_arch = "aarch64"))))]
+compile_error!("XLM only supports Linux x86_64 and aarch64");
 
 mod commands;
 mod ui;
