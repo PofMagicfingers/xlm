@@ -1,5 +1,13 @@
 # XLM - XIVLauncher Manager
 
+> **About this fork.** This branch builds XLM for Linux aarch64, for
+> [DroidDeck](https://github.com/Droid-Deck/DroidDeck) (Steam on Android): an aarch64 build and
+> release, an embedded aarch64 aria2c, the `XIVLauncher.Core-arm64.tar.gz` archive by default on
+> aarch64, and a DroidDeck installer. It was written with an AI assistant. It goes with the ARM64
+> example in [PofMagicfingers/XIVLauncher.Core](https://github.com/PofMagicfingers/XIVLauncher.Core),
+> whose releases carry test builds of both.
+
+
 An alternative method for launching XIVLauncher.Core on Linux. XLM allows for launching standalone (e.g embedded in XIVLauncher packages as a bootstrapper) or via a Steam compatibility tool whilst providing features like launcher auto-updates and Steam overlay support!.
 
 ## Setup (Steam compatibility tool)
