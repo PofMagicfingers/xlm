@@ -4,11 +4,11 @@ An alternative method for launching XIVLauncher.Core on Linux. XLM allows for la
 
 ## Setup (Steam compatibility tool)
 
-Auto installers for the Steam compatibility tool part of XLM are provided for the `Steam Deck`, `Flatpak`, `Snap` and `Native` versions of Steam. For any other type of setup you may need to manually download the XLM binary from the [GitHub Releases Page](https://github.com/Blooym/xlm/releases/latest) or with install it with cargo (`cargo install --git https://github.com/Blooym/xlm`). Most installs of XLM will be kept up to date automatically unless explicitly disabled.
+Auto installers for the Steam compatibility tool part of XLM are provided for the `Steam Deck`, `Flatpak`, `Snap` and `Native` versions of Steam, and for DroidDeck. For any other type of setup you may need to manually download the XLM binary from the [GitHub Releases Page](https://github.com/Blooym/xlm/releases/latest) or with install it with cargo (`cargo install --git https://github.com/Blooym/xlm`). Most installs of XLM will be kept up to date automatically unless explicitly disabled.
 
 ### Installers
 
-Run one of the following commands to install XLM as a Steam compatibility tool. What command you need to run depends on how you have Steam installed. **These scripts CANNOT and SHOULD NOT be run with sudo or root permissions.**
+Run one of the following commands to install XLM as a Steam compatibility tool. What command you need to run depends on how you have Steam installed. **These scripts CANNOT and SHOULD NOT be run with sudo or root permissions** (except DroidDeck's, where Steam itself runs as root).
 
 Steamdeck:
 
@@ -24,6 +24,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Blooym/xlm/main/setup/inst
 Steam (Flatpak):
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Blooym/xlm/main/setup/install-flatpak.sh)"
+```
+
+DroidDeck (Android, ARM64), from DroidDeck's desktop terminal:
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Blooym/xlm/main/setup/install-droiddeck.sh)"
 ```
 
 ---
