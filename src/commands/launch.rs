@@ -22,7 +22,15 @@ const XIVLAUNCHER_BIN_FILENAME: &str = "XIVLauncher.Core";
 const XIVLAUNCHER_VERSION_REMOTE_FILENAME: &str = "version";
 const XIVLAUNCHER_VERSIONDATA_LOCAL_FILENAME: &str = "versiondata";
 const ARIA2C_BIN_FILENAME: &str = "aria2c";
+#[cfg(target_arch = "x86_64")]
 const EMBEDDED_ARIA2C_TARBALL: &[u8] = include_bytes!("../../static/aria2c-static.tar.gz");
+#[cfg(target_arch = "aarch64")]
+const EMBEDDED_ARIA2C_TARBALL: &[u8] = include_bytes!("../../static/aria2c-static-aarch64.tar.gz");
+/// The XIVLauncher.Core release archive built for this architecture.
+#[cfg(target_arch = "x86_64")]
+const DEFAULT_XLCORE_RELEASE_ASSET: &str = "XIVLauncher.Core.tar.gz";
+#[cfg(target_arch = "aarch64")]
+const DEFAULT_XLCORE_RELEASE_ASSET: &str = "XIVLauncher.Core-arm64.tar.gz";
 
 /// Install or update XIVLauncher and then open it.
 #[derive(Debug, Clone, Parser)]
@@ -45,7 +53,7 @@ pub struct LaunchCommand {
 
     /// The name of the release tar.gz archive that contains a self-contained XIVLauncher.
     #[clap(
-        default_value = "XIVLauncher.Core.tar.gz",
+        default_value = DEFAULT_XLCORE_RELEASE_ASSET,
         long = "xlcore-release-asset",
         env = "XLM_XLCORE_RELEASE_ASSET"
     )]
