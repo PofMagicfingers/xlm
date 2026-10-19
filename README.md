@@ -36,7 +36,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Blooym/xlm/main/setup/inst
 
 DroidDeck (Android, ARM64), from DroidDeck's desktop terminal:
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Blooym/xlm/main/setup/install-droiddeck.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/PofMagicfingers/xlm/droiddeck-aarch64/setup/install-droiddeck.sh)"
 ```
 
 ---
